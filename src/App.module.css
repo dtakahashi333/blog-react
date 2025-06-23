@@ -1,0 +1,45 @@
+.app-root {
+  display: grid;
+
+  grid-template-areas:
+    "top-nav"
+    "content-area";
+
+  grid-template-rows: 64px auto;
+  gap: 20px;
+  height: 100%; /* Optional: fill full screen height */
+}
+
+.top-nav {
+  grid-area: top-nav;
+}
+
+.content-area {
+  grid-area: content-area;
+
+  display: grid;
+
+  grid-template-areas: "sidebar blog-area table-of-contents";
+
+  grid-template-columns: 280px auto 280px;
+  gap: 20px;
+  width: 100%;
+}
+
+.sidebar {
+  grid-area: sidebar;
+
+  margin-left: 40px;
+}
+
+.blog-area {
+  grid-area: blog-area;
+
+  margin: 0 40px;
+}
+
+.table-of-contents {
+  grid-area: table-of-contents;
+
+  margin-right: 40px;
+}
